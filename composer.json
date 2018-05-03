@@ -1,0 +1,7 @@
+{
+    "name": "40249/web-ii---projeto-dois",
+    "license": "MIT",
+    "require": {
+        "twbs/bootstrap": "^4.1"
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    padding-top: 50px;
+}
+
+.principal {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.divFormCadFuncionarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+.divGambiarra01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
