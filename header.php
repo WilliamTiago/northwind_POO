@@ -17,12 +17,21 @@
             </div>
             <div>
                 <ul class ="nav navbar-nav">
-                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php">Funcion�rios</a></li>
-                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionario.php">Cadastrar Clientes</a></li>
-                    <li><a href ="">Produtos</a></li>
-                    <li><a href ="">Ordens</a></li>
-                    <li><a href ="">Clientes</a></li>
-                    <li><a href ="">Sobre</a></li>
+                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php">Funcionários</a></li>
+                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao">Regiões</a></li>
+                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio">Territórios</a></li>
+                    <?php
+                    if(isset($AddRegiao)){
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao">Cadastrar Região</a></li>';
+                    }; 
+                    if(isset($AddFuncionario)){
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionario.php">Cadastrar Funcionario</a></li>';
+                    };
+                    if(isset($AddRegiao)){
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio">Cadastrar Território</a></li>';
+                    };
+                    ?>
+                    <li style="float:rigth;"><a href ="">Sobre</a></li>
                 </ul>
             </div>
         </div>
