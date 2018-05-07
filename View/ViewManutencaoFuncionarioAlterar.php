@@ -12,7 +12,7 @@
     $oConexao     = new PersistenciaBancoDados("localhost", "root", "", "northwind");
     $oFuncionario = new PersistenciaFuncionario($oConexao);
     
-    $iId = $_POST["IDFuncionario"];
+    $iId = $_GET["id"];
     $oFunc = $oFuncionario->buscaFuncionario($iId);
 ?>
 
@@ -20,60 +20,62 @@
     <form class = "container" action = "/William/desenvolvimento_web_2/northwind_POO/Controller/ControllerFuncionarioUpdate.php" method = "POST">
         <div class = "divGambiarra01">
             <div class = "container">
-                <div class="form-group">
-                    
-                    <input type="hidden" class="form-control" name="IDFuncionario" value="<?php echo $oFunc[0]['IDFuncionario'] ?>">
+                <div class="form-group">                    
+                    <input type="hidden" class="form-control" name="IDFuncionario" value="<?php print $oFunc['IDFuncionario'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="nome_fun">Nome do Funcion�rio</label>
-                    <input type="text" class="form-control" name="Nome" value="<?php echo $oFunc[0]['Nome'] ?>" >
+                    <input type="text" class="form-control" name="Nome" value="<?php print $oFunc['Nome'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="sobrenome_fun">Sobrenome</label>
-                    <input type="text" class="form-control" name="Sobrenome" value="<?php echo $oFunc[0]['Sobrenome'] ?>" >
+                    <input type="text" class="form-control" name="Sobrenome" value="<?php print $oFunc['Sobrenome'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="titulo_cortesia">Titulo</label>
-                    <input type="text" class="form-control" name="Titulo" value="<?php echo $oFunc[0]['Titulo'] ?>" >
+                    <input type="text" class="form-control" name="Titulo" value="<?php print $oFunc['Titulo'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="preco">Titulo Cortesia</label>
-                    <input type="text" class="form-control" name="TituloCortesia" value="<?php echo $oFunc[0]['TituloCortesia'] ?>">
+                    <input type="text" class="form-control" name="TituloCortesia" value="<?php print $oFunc['TituloCortesia'] ?>">
                 </div>
                 <div class="form-group">
                     <label for="data_nasc">Data de Nascimento</label>
-                    <input type="date" class="form-control" name="DataNac" value="<?php echo $oFunc[0]['DataNac'] ?>" >
+                    <input type="date" class="form-control" name="DataNac" value="<?php print $oFunc['DataNac'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="data_adm">Data de Adminiss�o</label>
-                    <input type="date" class="form-control" name="DataAdmissao" value="<?php echo $oFunc[0]['DataAdmissao'] ?>" >
+                    <input type="date" class="form-control" name="DataAdmissao" value="<?php print $oFunc['DataAdmissao'] ?>" >
                 </div>
             </div>
 
             <div class = "container">
+                <div class="form-group">                    
+                    <input type="hidden" class="form-control" name="IDFuncionario" value="<?php print $oFunc['IDFuncionario'] ?>">
+                </div>
                 <div class="form-group">
                     <label for="endereco">Endere�o</label>
-                    <input type="text" class="form-control" name="Endereco" value="<?php echo $oFunc[0]['Endereco'] ?>" >
+                    <input type="text" class="form-control" name="Endereco" value="<?php print $oFunc['Endereco'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="cidade">Cidade</label>
-                    <input type="text" class="form-control" name="Cidade" value="<?php echo $oFunc[0]['Cidade'] ?>" >
+                    <input type="text" class="form-control" name="Cidade" value="<?php print $oFunc['Cidade'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="regiao">Região</label>
-                    <input type="text" class="form-control" name="Regiao" value="<?php echo $oFunc[0]['Regiao'] ?>" >
+                    <input type="text" class="form-control" name="Regiao" value="<?php print $oFunc['Regiao'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="cep">Cep</label>
-                    <input type="text" class="form-control" name="Cep" value="<?php echo $oFunc[0]['Cep'] ?>" >
+                    <input type="text" class="form-control" name="Cep" value="<?php print $oFunc['Cep'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="pais">País</label>
-                    <input type="text" class="form-control" name="Pais" value="<?php echo $oFunc[0]['Pais'] ?>" >
+                    <input type="text" class="form-control" name="Pais" value="<?php print $oFunc['Pais'] ?>" >
                 </div>
                 <div class="form-group">
                     <label for="tel_residencial">Telefone Residencial</label>
-                    <input type="text" class="form-control" name="TelefoneResidencial" value="<?php echo $oFunc[0]['TelefoneResidencial'] ?>" >
+                    <input type="text" class="form-control" name="TelefoneResidencial" value="<?php print $oFunc['TelefoneResidencial'] ?>" >
                 </div>
 <!--                <div class="form-group">
                     <label for="extensao">Extensão</label>

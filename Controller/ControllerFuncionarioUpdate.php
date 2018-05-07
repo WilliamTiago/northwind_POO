@@ -8,8 +8,7 @@
     include_once($sFilePersFuncionario);
     
     $oConexao     = new PersistenciaBancoDados("localhost", "root", "", "northwind");
-    $oFuncionario = new PersistenciaFuncionario($oConexao);
-   
+    $oFuncionario = new PersistenciaFuncionario($oConexao); 
     $aCampos = [
         "IDFuncionario"       => $_POST["IDFuncionario"],
         "Nome"                => $_POST["Nome"],
@@ -28,17 +27,17 @@
     
     $oFunc = $oFuncionario->alterarCampos($aCampos);
     
-    if(!$oFunc) {
+  if(!$oFunc) {
         ?>
         <script>
-        alert("Funcion�rio n�o alterado!");
+        alert("Funcionário não alterado!");
         window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
         </script>
         <?php 
     } else {
     ?>
         <script>
-            alert("Funcion�rio alterado com sucesso!");
+            alert("Funcionário alterado com sucesso!");
             window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
         </script>
     <?php

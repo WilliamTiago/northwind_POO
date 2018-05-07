@@ -65,6 +65,7 @@ class PersistenciaFuncionario {
      * @return type
      */
     public function alterarCampos($aCampos) {
+               
         $sSql = "UPDATE funcionarios
                     SET IDFuncionario       = " . $aCampos["IDFuncionario"] . ",
                         Nome                = '" . $aCampos["Nome"] . "',
@@ -122,7 +123,7 @@ class PersistenciaFuncionario {
             $aFuncionario[] = $oLinhas;
         }
         
-        return $aFuncionario;
+        return $aFuncionario[0];
     }
     
 }

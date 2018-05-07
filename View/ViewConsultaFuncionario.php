@@ -42,8 +42,8 @@
         <td><?= $oFuncionario["Endereco"] ?></td>
         <td><?= $oFuncionario["Cidade"] ?></td>
         <td>
-            <a href="<?php print("formUpdateProduto.php?id=".$oFuncionario["IDFuncionario"]) ?>" class="btn btn-primary">Alterar</a>
-            <a href="<?php print("formUpdateProduto.php?id=".$oFuncionario["IDFuncionario"]) ?>" class="btn btn-primary">Excluir</a>
+            <a href="<?php print("/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionarioAlterar.php?id=".$oFuncionario["IDFuncionario"]) ?>" class="btn btn-primary">Alterar</a>
+            <a href="<?php print("/William/desenvolvimento_web_2/northwind_POO/View/ControllerFuncionarioDelete.php?id=".$oFuncionario["IDFuncionario"]) ?>" class="btn btn-primary">Excluir</a>
         </td>
     </tr>
     <?php
