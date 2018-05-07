@@ -10,15 +10,15 @@
     
 ?>
 <div class = "divFormCadFuncionarios">
-    <form class = "container" action = "/william/WEB-II---Projeto-Dois/Controller/ControllerFuncionarioAdd.php" method = "POST">
+    <form class = "container" action = "/William/desenvolvimento_web_2/northwind_POO/Controller/ControllerFuncionarioAdd.php" method = "POST">
         <div class = "divGambiarra01">
             <div class = "container">
                 <div class="form-group">
-                    <label for="id_funcionario">Identificador do Funcionário</label>
+                    <label for="id_funcionario">Identificador do Funcionï¿½rio</label>
                     <input type="number" class="form-control" name="IDFuncionario" placeholder="Nome">
                 </div>
                 <div class="form-group">
-                    <label for="nome_fun">Nome do Funcionário</label>
+                    <label for="nome_fun">Nome do Funcionï¿½rio</label>
                     <input type="text" class="form-control" name="Nome" placeholder="Nome">
                 </div>
                 <div class="form-group">
@@ -38,14 +38,14 @@
                     <input type="date" class="form-control" name="DataNac" placeholder="PreÃ§o do Produto">
                 </div>
                 <div class="form-group">
-                    <label for="data_adm">Data de Adminissão</label>
+                    <label for="data_adm">Data de Adminissï¿½o</label>
                     <input type="date" class="form-control" name="DataAdmissao" placeholder="PreÃ§o do Produto">
                 </div>
             </div>
 
             <div class = "container">
                 <div class="form-group">
-                    <label for="endereco">Endereço</label>
+                    <label for="endereco">Endereï¿½o</label>
                     <input type="text" class="form-control" name="Endereco" placeholder="CÃ³digo da Categoria">
                 </div>
                 <div class="form-group">

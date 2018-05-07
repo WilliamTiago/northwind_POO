@@ -32,16 +32,16 @@
     if($bInsersao) {
 ?>
 <script>
-    alert("Funcionário cadastrado com Sucesso!");s
-    window.location.href = '/william/WEB-II---Projeto-Dois/View/ViewConsultaFuncionario.php';
+    alert("Funcionï¿½rio cadastrado com Sucesso!");s
+    window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
 </script>
 
 <?php
     } else {
 ?>
 <script>
-   // alert("Funcionário não cadastrado!");
-   // window.location.href = '/william/WEB-II---Projeto-Dois/View/ViewConsultaFuncionario.php';
+    alert("Funcionï¿½rio nï¿½o cadastrado!");
+    window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
 </script>
 <?php
     

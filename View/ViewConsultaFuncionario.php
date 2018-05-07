@@ -17,14 +17,14 @@
 <table  class ="table table-striped table-bordered">
     <tr>
         <td>Cod Func</td>
-        <td>Nome Funcionárop</td>
+        <td>Nome Funcionï¿½rop</td>
         <td>Titulo</td>
         <td>Data Nasc</td>
         <td>Data Adm</td>
         <td>Pais</td>
-        <td>Endereço</td>
+        <td>Endereï¿½o</td>
         <td>Cidade</td>
-        <td>Ações</td>
+        <td>Aï¿½ï¿½es</td>
     </tr>
 
     <?php
@@ -43,11 +43,11 @@
         <td><?= $oFuncionario["Cidade"] ?></td>
         <td>
             <form class="btn-group" action ="ViewManutencaoFuncionarioAlterar.php" method ="POST">
-                <input type ="hidden" name ="IDFuncionario" value="<?php echo $oFuncionario["IDFuncionario"]?>">
+                <input type ="hidden" name ="IDFuncionario" value="<?php print $oFuncionario["IDFuncionario"]?>">
                 <input class ="btn btn-primary" type ="submit" value ="Alterar"></input>
             </form>
-            <form class="btn-group" action ="ControllerFuncionarioDelete.php" method ="POST">
-                <input type ="hidden" name ="IDFuncionario" value="<?php echo $oFuncionario["IDFuncionario"]?>">
+            <form class="btn-group" action ="/William/desenvolvimento_web_2/northwind_POO/Controller/ControllerFuncionarioDelete.php" method ="Get">
+                <input type ="hidden" name ="ID" value="<?php print $oFuncionario["IDFuncionario"]?>">
                 <input class ="btn btn-primary" type ="submit" value ="Excluir"></input>
             </form>
         </td>

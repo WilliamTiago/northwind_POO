@@ -31,15 +31,15 @@
     if(!$oFunc) {
         ?>
         <script>
-        alert("Funcionário não alterado!");
-        window.location.href = '/william/WEB-II---Projeto-Dois/View/ViewConsultaFuncionario.php';
+        alert("Funcionï¿½rio nï¿½o alterado!");
+        window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
         </script>
         <?php 
     } else {
     ?>
         <script>
-            alert("Funcionário alterado com sucesso!");
-            window.location.href = '/william/WEB-II---Projeto-Dois/View/ViewConsultaFuncionario.php';
+            alert("Funcionï¿½rio alterado com sucesso!");
+            window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
         </script>
     <?php
     }

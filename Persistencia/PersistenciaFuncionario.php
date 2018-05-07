@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Classe Controladora de todas as funcções utilizadas na aplicação.
+ * Classe Controladora de todas as funcï¿½ï¿½es utilizadas na aplicaï¿½ï¿½o.
  * 
  * @author Roberto Oswaldo Klann
  * @since  25/04/2018 
@@ -20,7 +20,7 @@ class PersistenciaFuncionario {
     }   
     
     /**
-     * Utilizado para buscar todos os funcionários cadastrados
+     * Utilizado para buscar todos os funcionï¿½rios cadastrados
      * 
      * return type Array[]
      */
@@ -44,7 +44,7 @@ class PersistenciaFuncionario {
     }
 
     /**
-     * Insere os funcionários.
+     * Insere os funcionï¿½rios.
      * 
      * @param type $aCampos
      * @return type
@@ -58,7 +58,7 @@ class PersistenciaFuncionario {
     }
     
     /**
-     * Realiza o UPDATE no funcionário desejado.
+     * Realiza o UPDATE no funcionï¿½rio desejado.
      * 
      * @param type $oConexao
      * @param type $aCampos
@@ -85,16 +85,16 @@ class PersistenciaFuncionario {
     }
     
     /**
-     * Realiza o DELETE do funcionário desejado.
+     * Realiza o DELETE do funcionï¿½rio desejado.
      * 
      * @param type $oConexao
      * @param type $iId
      * @return type
      */
-    public function excluiDado($iId) {
-        $sSql = "
-                ";
-        
+
+    public function excluiDado($Id) {
+        $sSql = "Delete from Funcionarios
+                        where IDFuncionario = " .  $Id;        
         return mysqli_query($this->oFuncao->getConexao(),  $sSql);
     }
     
