@@ -18,17 +18,17 @@
             <div>
                 <ul class ="nav navbar-nav">
                     <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php">Funcionários</a></li>
-                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao">Regiões</a></li>
-                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio">Territórios</a></li>
+                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaRegiao.php">Regiões</a></li>
+                    <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaTerritorio.php">Territórios</a></li>
                     <?php
                     if(isset($AddRegiao)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao" class="btn btn-primary">Cadastrar Região</a></li>';
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao.php" class="btn btn-primary">Cadastrar Região</a></li>';
                     }; 
                     if(isset($AddFuncionario)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionario.php">Cadastrar Funcionario</a></li>';
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionario.php" class="btn btn-primary">Cadastrar Funcionario</a></li>';
                     };
-                    if(isset($AddRegiao)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio">Cadastrar Território</a></li>';
+                    if(isset($AddTerritorio)){
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio.php" class="btn btn-primary">Cadastrar Território</a></li>';
                     };
                     ?>
                 </ul>

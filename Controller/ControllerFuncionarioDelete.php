@@ -8,7 +8,7 @@
     $oConexao      = new PersistenciaBancoDados("localhost", "root", "", "northwind");
     $bDelete  = new PersistenciaFuncionario($oConexao);
     
-    $Id = $_GET["ID"];
+    $Id = $_GET["id"];
     echo($Id);
     
     $Delete = $bDelete->excluiDado($Id);
@@ -27,5 +27,5 @@
     window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
 </script>
 <?php
-    }
+}
     

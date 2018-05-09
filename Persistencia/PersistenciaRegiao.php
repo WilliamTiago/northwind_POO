@@ -6,7 +6,7 @@
  * @author William Tiago Velho da Silva Goebel
  * @since  28/04/2018 
  */
-class PersistenciaFuncionario {
+class PersistenciaRegiao {
     
     private $oFuncao;
     
@@ -24,20 +24,13 @@ class PersistenciaFuncionario {
      * 
      * return type Array[]
      */
-    public function selectAllFuncionarios() {
-        $aFuncionarios = [];
+    public function selectAllRegiaos() {
+        $aRegiaos = [];
 
         $sSql = "
-            SELECT Nome,
-                   IDFuncionario,
-                   Titulo,
-                   DataNac,
-                   DataAdmissao,
-                   Pais,
-                   Endereco,
-                   Cidade,
-                   Foto
-              FROM funcionarios
+            SELECT IDRegiao,
+                   DescricaoRegiao                   
+              FROM Regiao
         ";
 
         return mysqli_query($this->oFuncao->getConexao(), $sSql);
@@ -49,10 +42,10 @@ class PersistenciaFuncionario {
      * @param type $aCampos
      * @return type
      */
-    public function insereFuncionario($aCampos) {
+    public function insereRegiao($aCampos) {
         $sSql = "
-            INSERT INTO funcionarios(IDFuncionario, Sobrenome, Nome, Titulo, TituloCortesia, DataNac, DataAdmissao, Endereco, Cidade, Regiao, Cep, Pais, TelefoneResidencial)
-                 VALUES(" . $aCampos["IDFuncionario"]. ",'" . $aCampos["Sobrenome"]. "','" . $aCampos["Nome"]. "','" . $aCampos["Titulo"]. "','". $aCampos["TituloCortesia"]. "','" . $aCampos["DataNac"]. "','"
+            INSERT INTO Regiaos(IDRegiao, Sobrenome, Nome, Titulo, TituloCortesia, DataNac, DataAdmissao, Endereco, Cidade, Regiao, Cep, Pais, TelefoneResidencial)
+                 VALUES(" . $aCampos["IDRegiao"]. ",'" . $aCampos["Sobrenome"]. "','" . $aCampos["Nome"]. "','" . $aCampos["Titulo"]. "','". $aCampos["TituloCortesia"]. "','" . $aCampos["DataNac"]. "','"
                 . $aCampos["DataAdmissao"]. "','" . $aCampos["Endereco"]. "','" . $aCampos["Cidade"]. "','" . $aCampos["Regiao"]. "','" . $aCampos["Cep"]. "','" . $aCampos["Pais"]. "','" . $aCampos["TelefoneResidencial"] . "')";
         return mysqli_query($this->oFuncao->getConexao(), $sSql);
     }
@@ -66,8 +59,8 @@ class PersistenciaFuncionario {
      */
     public function alterarCampos($aCampos) {
                
-        $sSql = "UPDATE funcionarios
-                    SET IDFuncionario       = " . $aCampos["IDFuncionario"] . ",
+        $sSql = "UPDATE Regiaos
+                    SET IDRegiao       = " . $aCampos["IDRegiao"] . ",
                         Nome                = '" . $aCampos["Nome"] . "',
                         Sobrenome           = '" . $aCampos["Sobrenome"] . "',
                         Titulo              = '" . $aCampos["Titulo"] . "',
@@ -80,7 +73,7 @@ class PersistenciaFuncionario {
                         Cep                 = '" . $aCampos["Cep"] . "',
                         Pais                = '" . $aCampos["Pais"] . "',
                         TelefoneResidencial = '" . $aCampos["TelefoneResidencial"] . "'
-                  WHERE IDFuncionario = " . $aCampos["IDFuncionario"];
+                  WHERE IDRegiao = " . $aCampos["IDRegiao"];
 
         echo"<pre>";
         print_r($sSql);
@@ -97,36 +90,25 @@ class PersistenciaFuncionario {
      */
 
     public function excluiDado($Id) {
-        $sSql = "Delete from Funcionarios
-                        where IDFuncionario = " .  $Id;        
+        $sSql = "Delete from Regiaos
+                        where IDRegiao = " .  $Id;        
         return mysqli_query($this->oFuncao->getConexao(),  $sSql);
     }
     
-    public function buscaFuncionario($iId) {
-        $aFuncionario = [];
+    public function buscaRegiao($iId) {
+        $aRegiao = [];
         $sSql = "
-            SELECT IDFuncionario,
-                   Nome,
-                   Sobrenome,
-                   Titulo,
-                   TituloCortesia,
-                   DataNac,
-                   DataAdmissao,
-                   Endereco,
-                   Cidade,
-                   Regiao,
-                   Cep,
-                   Pais,
-                   TelefoneResidencial
-              FROM funcionarios
-             WHERE IDFuncionario = " . $iId;
+            SELECT DescricaoRegiao,
+                   IDRegiao                   
+                   FROM Regiao
+             WHERE IDRegiao = " . $iId;
         
-        $oFuncionario = mysqli_query($this->oFuncao->getConexao(), $sSql);
-        while($oLinhas = mysqli_fetch_array($oFuncionario)) {
-            $aFuncionario[] = $oLinhas;
+        $oRegiao = mysqli_query($this->oFuncao->getConexao(), $sSql);
+        while($oLinhas = mysqli_fetch_array($oRegiao)) {
+            $aRegiao[] = $oLinhas;
         }
         
-        return $aFuncionario[0];
+        return $aRegiao[0];
     }
     
 }

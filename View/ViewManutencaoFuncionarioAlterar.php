@@ -24,7 +24,7 @@
                     <input type="hidden" class="form-control" name="IDFuncionario" value="<?php print $oFunc['IDFuncionario'] ?>">
                 </div>
                 <div class="form-group">
-                    <label for="nome_fun">Nome do Funcion�rio</label>
+                    <label for="nome_fun">Nome do Funcionário</label>
                     <input type="text" class="form-control" name="Nome" value="<?php print $oFunc['Nome'] ?>" >
                 </div>
                 <div class="form-group">
@@ -41,11 +41,11 @@
                 </div>
                 <div class="form-group">
                     <label for="data_nasc">Data de Nascimento</label>
-                    <input type="date" class="form-control" name="DataNac" value="<?php print $oFunc['DataNac'] ?>" >
+                    <input type="date" class="form-control" name="DataNac" value="<?php print $oFunc['DataNac'] ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="data_adm">Data de Adminiss�o</label>
-                    <input type="date" class="form-control" name="DataAdmissao" value="<?php print $oFunc['DataAdmissao'] ?>" >
+                    <input type="date" class="form-control" name="DataAdmissao" value="<?php print $oFunc['DataAdmissao'] ?> " required>
                 </div>
             </div>
 
@@ -76,20 +76,12 @@
                 <div class="form-group">
                     <label for="tel_residencial">Telefone Residencial</label>
                     <input type="text" class="form-control" name="TelefoneResidencial" value="<?php print $oFunc['TelefoneResidencial'] ?>" >
-                </div>
-<!--                <div class="form-group">
-                    <label for="extensao">Extensão</label>
-                    <input type="text" class="form-control" name="extensao" placeholder="Preço do Produto">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">Foto de Perfil</label>
-                    <input type="file" id="exampleInputFile">
-                </div>-->
+                </div>  
             </div>
         </div>
         <button type="submit" class="btn btn-default">Confirmar</button>
-        <a class="btn btn-default" href = "produto_lista.php">Cancelar</a>
-        <button class="btn btn-default" >Limpar</button>   
+        <a class="btn btn-default" href="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php">Cancelar</a>
+        <button type="reset" class="btn btn-default">Limpar</button>   
     </form>
 </div>
 
