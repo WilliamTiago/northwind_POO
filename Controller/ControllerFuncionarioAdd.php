@@ -32,7 +32,7 @@
     if($bInsersao) {
 ?>
 <script>
-    alert("Funcion�rio cadastrado com Sucesso!");s
+    alert("Funcionário cadastrado com Sucesso!");s
     window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
 </script>
 
@@ -40,9 +40,9 @@
     } else {
 ?>
 <script>
-    alert("Funcion�rio n�o cadastrado!");
+    alert("Funcionário não cadastrado!");
     window.location.href = '/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaFuncionario.php';
 </script>
 <?php
     
-    }
+}

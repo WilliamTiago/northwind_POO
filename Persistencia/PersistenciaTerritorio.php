@@ -6,7 +6,7 @@
  * @author William Tiago Velho da Silva Goebel
  * @since  28/04/2018 
  */
-class PersistenciaRegiao {
+class PersistenciaTerritorio {
     
     private $oFuncao;
     
@@ -24,13 +24,16 @@ class PersistenciaRegiao {
      * 
      * return type Array[]
      */
-    public function selectAllRegiaos() {
-        $aRegiaos = [];
+    public function selectAllTerritorios() {
+        $aTerritorios = [];
 
         $sSql = "
-            SELECT IDRegiao,
-                   DescricaoRegiao                   
-              FROM Regiao
+            SELECT DescricaoTerritorio,
+                   IDRegiao,
+                   IDTerritorio                                      
+              FROM territorios
+              JOIN regiao
+             USING(IDRegiao)
         ";
 
         return mysqli_query($this->oFuncao->getConexao(), $sSql);
@@ -42,10 +45,11 @@ class PersistenciaRegiao {
      * @param type $aCampos
      * @return type
      */
-    public function insereRegiao($aCampos) {
+    public function insereTerritorio($aCampos) {
         $sSql = "
-            INSERT INTO Regiao(IDRegiao,DescricaoRegiao)
-                 VALUES(" . $aCampos["IDRegiao"]. ",'" . $aCampos["DescricaoRegiao"]. "')";
+            INSERT INTO Territorios(IDTerritorio,IDRegiao, DescricaoTerritorio)
+                 VALUES(" . $aCampos["IDTerritorio"]. ",'" . $aCampos["IDRegiao"]. "','" . $aCampos["DescricaoTerritorio"]. "')";
+        print_r($sSql);
         return mysqli_query($this->oFuncao->getConexao(), $sSql);
     }
     
@@ -58,9 +62,10 @@ class PersistenciaRegiao {
      */
     public function alterarCampos($aCampos) {
                
-        $sSql = "UPDATE Regiao
-                    SET DescricaoRegiao  = '" . $aCampos["Nome"] . "'
-                  WHERE IDRegiao = " . $aCampos["IDRegiao"];
+        $sSql = "UPDATE Territorios
+                    SET DescricaoTerritorio  = '" . $aCampos["Nome"] . "',
+                        IDTerritorio         = '" . $aCampos["IDTerritorio"] . "'
+                  WHERE IDTerritorio = " . $aCampos["IDTerritorio"];
 
         echo"<pre>";
         print_r($sSql);
@@ -77,26 +82,26 @@ class PersistenciaRegiao {
      */
 
     public function excluiDado($Id) {
-        $sSql = "Delete from Regiao
-                        where IDRegiao = " .  $Id;        
+        $sSql = "Delete from Territorios
+                        where IDTerritorio = " .  $Id;        
         print_r($sSql);
         return mysqli_query($this->oFuncao->getConexao(),  $sSql);
     }
     
-    public function buscaRegiao($iId) {
-        $aRegiao = [];
+    public function buscaTerritorio($iId) {
+        $aTerritorio = [];
         $sSql = "
-            SELECT DescricaoRegiao,
-                   IDRegiao                   
-                   FROM Regiao
-             WHERE IDRegiao = " . $iId;
+            SELECT DescricaoTerritorio,
+                   IDTerritorio                   
+                   FROM territorios
+             WHERE IDTerritorio = " . $iId;
         
-        $oRegiao = mysqli_query($this->oFuncao->getConexao(), $sSql);
-        while($oLinhas = mysqli_fetch_array($oRegiao)) {
-            $aRegiao[] = $oLinhas;
+        $oTerritorio = mysqli_query($this->oFuncao->getConexao(), $sSql);
+        while($oLinhas = mysqli_fetch_array($oTerritorio)) {
+            $aTerritorio[] = $oLinhas;
         }
         
-        return $aRegiao[0];
+        return $aTerritorio[0];
     }
     
 }

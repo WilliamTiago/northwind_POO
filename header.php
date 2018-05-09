@@ -22,13 +22,13 @@
                     <li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewConsultaTerritorio.php">Territórios</a></li>
                     <?php
                     if(isset($AddRegiao)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoRegiao.php" class="btn btn-primary">Cadastrar Região</a></li>';
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewRegiaoAdd.php" class="btn btn-primary">Cadastrar Região</a></li>';
                     }; 
                     if(isset($AddFuncionario)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoFuncionario.php" class="btn btn-primary">Cadastrar Funcionario</a></li>';
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewFuncionarioAdd.php" class="btn btn-primary">Cadastrar Funcionario</a></li>';
                     };
                     if(isset($AddTerritorio)){
-                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewManutencaoTerritorio.php" class="btn btn-primary">Cadastrar Território</a></li>';
+                        echo'<li><a href ="/William/desenvolvimento_web_2/northwind_POO/View/ViewTerritorioAdd.php" class="btn btn-primary">Cadastrar Território</a></li>';
                     };
                     ?>
                 </ul>

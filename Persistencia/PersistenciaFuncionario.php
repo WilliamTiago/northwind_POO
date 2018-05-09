@@ -52,8 +52,9 @@ class PersistenciaFuncionario {
     public function insereFuncionario($aCampos) {
         $sSql = "
             INSERT INTO funcionarios(IDFuncionario, Sobrenome, Nome, Titulo, TituloCortesia, DataNac, DataAdmissao, Endereco, Cidade, Regiao, Cep, Pais, TelefoneResidencial)
-                 VALUES(" . $aCampos["IDFuncionario"]. ",'" . $aCampos["Sobrenome"]. "','" . $aCampos["Nome"]. "','" . $aCampos["Titulo"]. "','". $aCampos["TituloCortesia"]. "','" . $aCampos["DataNac"]. "','"
+                 VALUES(" . "'" . $aCampos["IDFuncionario"] ."'". ",'" . $aCampos["Sobrenome"]. "','" . $aCampos["Nome"]. "','" . $aCampos["Titulo"]. "','". $aCampos["TituloCortesia"]. "','" . $aCampos["DataNac"]. "','"
                 . $aCampos["DataAdmissao"]. "','" . $aCampos["Endereco"]. "','" . $aCampos["Cidade"]. "','" . $aCampos["Regiao"]. "','" . $aCampos["Cep"]. "','" . $aCampos["Pais"]. "','" . $aCampos["TelefoneResidencial"] . "')";
+        
         return mysqli_query($this->oFuncao->getConexao(), $sSql);
     }
     

@@ -1,10 +1,10 @@
 <?php
 
 /**
-  * Classe utilizada para realizar a concexão com o Banco de Dados
+  * Classe utilizada para realizar a concexï¿½o com o Banco de Dados
   * 
-  * @author Roberto Oswaldo Klann
-  * @since  25/04/2018
+  * @author Wiiliam Goebel
+  * @since  28/04/2018
  */
 class PersistenciaBancoDados {
     
@@ -23,7 +23,7 @@ class PersistenciaBancoDados {
     }
     
     /**
-     * Retorna a conexão com o banco de dados.
+     * Retorna a conexao com o banco de dados.
      * 
      * @return type
      */
@@ -33,7 +33,7 @@ class PersistenciaBancoDados {
     }
     
     /**
-     * Seta a conexão com o banco de dados.
+     * Seta a conexao com o banco de dados.
      * 
      * @param type $oHost
      * @param type $oRoot

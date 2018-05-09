@@ -54,7 +54,7 @@
                     <input type="hidden" class="form-control" name="IDFuncionario" value="<?php print $oFunc['IDFuncionario'] ?>">
                 </div>
                 <div class="form-group">
-                    <label for="endereco">Endere�o</label>
+                    <label for="endereco">Endereço</label>
                     <input type="text" class="form-control" name="Endereco" value="<?php print $oFunc['Endereco'] ?>" >
                 </div>
                 <div class="form-group">
